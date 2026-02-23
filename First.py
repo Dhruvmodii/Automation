@@ -12,12 +12,12 @@ driver.maximize_window()
 wait = WebDriverWait(driver, 30)
 
 # -------------------- OPEN WEBSITE --------------------
-driver.get("https://d6tnkcljxvlqk.cloudfront.net/login")
+driver.get("website") #website
 
 # -------------------- LOGIN --------------------
 try:
-    wait.until(EC.presence_of_element_located((By.ID, "inputEmail"))).send_keys("support@yelowsoft.com")
-    driver.find_element(By.ID, "inputPassword").send_keys("YSDev@1510")
+    wait.until(EC.presence_of_element_located((By.ID, "inputEmail"))).send_keys("email") #email
+    driver.find_element(By.ID, "inputPassword").send_keys("pass") #password
 
     driver.find_element(
         By.XPATH, '//*[@id="app"]/div[1]/app-login/div/form/div/div[2]/button'
